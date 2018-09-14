@@ -9,11 +9,11 @@ namespace DogChallenge
     enum Gender { Male, Female };
 
     class Dog {
-        public Dog(String name, String owner, int age, Gender gender){
-            name = this.name;
-            owner = this.owner;
-            age = this.age;
-            gender = this.gender;
+        public Dog(String nameC, String ownerC, int ageC, Gender genderC){
+            name = nameC;
+            owner = ownerC;
+            age = ageC;
+            gender = genderC;
         }
         public String name;
         public String owner;
@@ -29,13 +29,13 @@ namespace DogChallenge
         public String getTag (){
             String tag = "";
             if(gender == Gender.Male && age <= 1) {
-                tag = "If lost call " + owner +" His name is " + name + " and he is " + age + " year old.";
+                tag = "If lost, call " + owner +". His name is " + name + " and he is " + age + " year old.";
             } else if(gender == Gender.Male && age > 1) {
-                tag = "His name is " + name + " and he is " + age + " years old.";
+                tag = "If lost, call " + owner +". His name is " + name + " and he is " + age + " years old.";
             } else if(gender == Gender.Female && age <= 1) {
-                tag = "Her name is " + name + " and she is " + age + " year old.";
+                tag = "If lost, call " + owner +". Her name is " + name + " and she is " + age + " year old.";
             } else if(gender == Gender.Female && age > 1) {
-                tag = "Her name is " + name + " and she is " + age + " years old.";
+                tag = "If lost, call " + owner +". Her name is " + name + " and she is " + age + " years old.";
             }
 
             return tag;
